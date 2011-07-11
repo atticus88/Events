@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC46A82A13CB72F20047A843 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC46A82913CB72F20047A843 /* UIKit.framework */; };
+		FC46A82C13CB72F20047A843 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC46A82B13CB72F20047A843 /* Foundation.framework */; };
+		FC46A82E13CB72F20047A843 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC46A82D13CB72F20047A843 /* CoreGraphics.framework */; };
+		FC46A83413CB72F20047A843 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC46A83213CB72F20047A843 /* InfoPlist.strings */; };
+		FC46A83713CB72F20047A843 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC46A83613CB72F20047A843 /* main.m */; };
+		FC46A83A13CB72F20047A843 /* EventsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC46A83913CB72F20047A843 /* EventsAppDelegate.m */; };
+		FC46A83D13CB72F20047A843 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC46A83B13CB72F20047A843 /* MainWindow.xib */; };
+		FC46A84013CB72F20047A843 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC46A83F13CB72F20047A843 /* EventsViewController.m */; };
+		FC46A84313CB72F20047A843 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC46A84113CB72F20047A843 /* EventsViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FC46A82513CB72F20047A843 /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC46A82913CB72F20047A843 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FC46A82B13CB72F20047A843 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FC46A82D13CB72F20047A843 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FC46A83113CB72F20047A843 /* Events-Info.plist */ = {isa = PBXFileReference; path = "Events-Info.plist"; sourceTree = "<group>"; };
+		FC46A83313CB72F20047A843 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FC46A83513CB72F20047A843 /* Events-Prefix.pch */ = {isa = PBXFileReference; path = "Events-Prefix.pch"; sourceTree = "<group>"; };
+		FC46A83613CB72F20047A843 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC46A83813CB72F20047A843 /* EventsAppDelegate.h */ = {isa = PBXFileReference; path = EventsAppDelegate.h; sourceTree = "<group>"; };
+		FC46A83913CB72F20047A843 /* EventsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsAppDelegate.m; sourceTree = "<group>"; };
+		FC46A83C13CB72F20047A843 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		FC46A83E13CB72F20047A843 /* EventsViewController.h */ = {isa = PBXFileReference; path = EventsViewController.h; sourceTree = "<group>"; };
+		FC46A83F13CB72F20047A843 /* EventsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		FC46A84213CB72F20047A843 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EventsViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC46A82213CB72F20047A843 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC46A82A13CB72F20047A843 /* UIKit.framework in Frameworks */,
+				FC46A82C13CB72F20047A843 /* Foundation.framework in Frameworks */,
+				FC46A82E13CB72F20047A843 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC46A81A13CB72F20047A843 = {
+			isa = PBXGroup;
+			children = (
+				FC46A82F13CB72F20047A843 /* Events */,
+				FC46A82813CB72F20047A843 /* Frameworks */,
+				FC46A82613CB72F20047A843 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC46A82613CB72F20047A843 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC46A82513CB72F20047A843 /* Events.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC46A82813CB72F20047A843 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC46A82913CB72F20047A843 /* UIKit.framework */,
+				FC46A82B13CB72F20047A843 /* Foundation.framework */,
+				FC46A82D13CB72F20047A843 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC46A82F13CB72F20047A843 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				FC46A83813CB72F20047A843 /* EventsAppDelegate.h */,
+				FC46A83913CB72F20047A843 /* EventsAppDelegate.m */,
+				FC46A83B13CB72F20047A843 /* MainWindow.xib */,
+				FC46A83E13CB72F20047A843 /* EventsViewController.h */,
+				FC46A83F13CB72F20047A843 /* EventsViewController.m */,
+				FC46A84113CB72F20047A843 /* EventsViewController.xib */,
+				FC46A83013CB72F20047A843 /* Supporting Files */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		FC46A83013CB72F20047A843 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC46A83113CB72F20047A843 /* Events-Info.plist */,
+				FC46A83213CB72F20047A843 /* InfoPlist.strings */,
+				FC46A83513CB72F20047A843 /* Events-Prefix.pch */,
+				FC46A83613CB72F20047A843 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC46A82413CB72F20047A843 /* Events */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC46A84613CB72F20047A843 /* Build configuration list for PBXNativeTarget "Events" */;
+			buildPhases = (
+				FC46A82113CB72F20047A843 /* Sources */,
+				FC46A82213CB72F20047A843 /* Frameworks */,
+				FC46A82313CB72F20047A843 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Events;
+			productName = Events;
+			productReference = FC46A82513CB72F20047A843 /* Events.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC46A81C13CB72F20047A843 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Klint Holmes";
+			};
+			buildConfigurationList = FC46A81F13CB72F20047A843 /* Build configuration list for PBXProject "Events" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FC46A81A13CB72F20047A843;
+			productRefGroup = FC46A82613CB72F20047A843 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC46A82413CB72F20047A843 /* Events */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC46A82313CB72F20047A843 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC46A83413CB72F20047A843 /* InfoPlist.strings in Resources */,
+				FC46A83D13CB72F20047A843 /* MainWindow.xib in Resources */,
+				FC46A84313CB72F20047A843 /* EventsViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC46A82113CB72F20047A843 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC46A83713CB72F20047A843 /* main.m in Sources */,
+				FC46A83A13CB72F20047A843 /* EventsAppDelegate.m in Sources */,
+				FC46A84013CB72F20047A843 /* EventsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FC46A83213CB72F20047A843 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC46A83313CB72F20047A843 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FC46A83B13CB72F20047A843 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC46A83C13CB72F20047A843 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		FC46A84113CB72F20047A843 /* EventsViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC46A84213CB72F20047A843 /* en */,
+			);
+			name = EventsViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC46A84413CB72F20047A843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FC46A84513CB72F20047A843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		FC46A84713CB72F20047A843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Events/Events-Prefix.pch";
+				INFOPLIST_FILE = "Events/Events-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FC46A84813CB72F20047A843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Events/Events-Prefix.pch";
+				INFOPLIST_FILE = "Events/Events-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC46A81F13CB72F20047A843 /* Build configuration list for PBXProject "Events" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC46A84413CB72F20047A843 /* Debug */,
+				FC46A84513CB72F20047A843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC46A84613CB72F20047A843 /* Build configuration list for PBXNativeTarget "Events" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC46A84713CB72F20047A843 /* Debug */,
+				FC46A84813CB72F20047A843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC46A81C13CB72F20047A843 /* Project object */;
+}
