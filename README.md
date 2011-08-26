@@ -1,6 +1,8 @@
 # Events App
 ***
 
+#GPS Not Working in Simulator
+
 GPS on Simulator doesn't work also on Xcode 3.2.6+ on Lion.
 
 Apple response on bug tracker:
