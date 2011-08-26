@@ -1,17 +1,24 @@
 //
-//  EventsViewController.m
+//  EventDetailViewController.m
 //  Events
 //
 //  Created by Klint Holmes on 7/11/11.
 //  Copyright 2011 Klint Holmes. All rights reserved.
 //
 
-#import "EventsViewController.h"
 #import "EventDetailViewController.h"
-#import "MyCLController.h"
 
-@implementation EventsViewController
-@synthesize search;
+
+@implementation EventDetailViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)dealloc
 {
@@ -28,39 +35,11 @@
 
 #pragma mark - View lifecycle
 
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    locationController = [[MyCLController alloc] init];
-	locationController.delegate = self;
-	[locationController.locationManager startUpdatingLocation];	
-
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
 }
-
-- (void)locationUpdate:(CLLocation *)location {
-    NSString *locationString = [NSString stringWithFormat:@"%.6f,%.6f", location.coordinate.latitude, location.coordinate.longitude];
-    NSLog(@"%@", locationString);
-   // dataReady = NO;
-    //HTTPRequest *request = [[HTTPRequest alloc] init];
-    //[request setDelegate:self];
-    
-    // Generate the URL and get the data from Google Places
-	// Found non-signed URL from: http://jasarien.com/?p=412
-   // [request startRequest:[NSString stringWithFormat:@"http://ajax.googleapis.com/ajax/services/search/local?v=1.0&rsz=8&sll=%@&q=restaurant", locationString]];
-    
-    //Used for testing Golden Dynesty 
-    //[request startRequest:[NSString stringWithFormat:@"http://ajax.googleapis.com/ajax/services/search/local?v=1.0&rsz=8&sll=%@&q=restaurant%%20Golden", locationString]];
-    //[request release];
-}
-
-- (void)locationError:(NSError *)error {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Area" message:@"Unable to use your location." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alert show];
-    [alert release];
-}
-
-
 
 - (void)viewDidUnload
 {
@@ -85,17 +64,12 @@
 
 -(NSInteger)tableView:(UITableView *)tableView
 numberOfRowsInSection:(NSInteger)section {
-	return 1;
-   // return [array count];
+	return 2;
 }
-
-/*-(NSInteger)add:(NSInteger)val1 secondValue:(NSInteger)val2 {
-    NSInteger total = val1 + val2;
-    return total;
-}*/
 
 -(UITableViewCell *)tableView:(UITableView *)tableView
 		cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	
 	//NSInteger row = [indexPath row];
 	//NSInteger section = [indexPath section];
 	static NSString *TableID = @"MyCell";
@@ -110,7 +84,7 @@ numberOfRowsInSection:(NSInteger)section {
 		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:TableID] autorelease];
 	}
 	
-	cell.textLabel.text = @"Event";
+	cell.textLabel.text = @"Label";
     
 	return cell;
 }
@@ -119,9 +93,11 @@ numberOfRowsInSection:(NSInteger)section {
 -(void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-    EventDetailViewController *detail = [[EventDetailViewController alloc] initWithNibName:@"EventDetailViewController" bundle:nil];
-    [self.navigationController pushViewController:detail animated:YES];
-    [search resignFirstResponder];
+}
+
+-(NSInteger)add:(NSInteger)val1 secondValue:(NSInteger)val2 {
+    NSInteger total = val1 + val2;
+    return total;
 }
 
 /*

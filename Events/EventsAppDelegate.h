@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class EventsViewController;
+//@class EventsViewController;
 
 @interface EventsAppDelegate : NSObject <UIApplicationDelegate> {
 
@@ -16,6 +16,6 @@
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
-@property (nonatomic, retain) IBOutlet EventsViewController *viewController;
+@property (nonatomic, retain) IBOutlet UINavigationController *viewController;
 
 @end

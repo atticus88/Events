@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC18CAEB14070C8B001B0041 /* MyCLController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC18CAEA14070C8B001B0041 /* MyCLController.m */; };
+		FC18CAEE14070CA0001B0041 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC18CAED14070CA0001B0041 /* MapKit.framework */; };
+		FC18CAF014070CC3001B0041 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC18CAEF14070CC2001B0041 /* CoreLocation.framework */; };
 		FC46A82A13CB72F20047A843 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC46A82913CB72F20047A843 /* UIKit.framework */; };
 		FC46A82C13CB72F20047A843 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC46A82B13CB72F20047A843 /* Foundation.framework */; };
 		FC46A82E13CB72F20047A843 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC46A82D13CB72F20047A843 /* CoreGraphics.framework */; };
@@ -16,23 +19,36 @@
 		FC46A83D13CB72F20047A843 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC46A83B13CB72F20047A843 /* MainWindow.xib */; };
 		FC46A84013CB72F20047A843 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC46A83F13CB72F20047A843 /* EventsViewController.m */; };
 		FC46A84313CB72F20047A843 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC46A84113CB72F20047A843 /* EventsViewController.xib */; };
+		FC46A84A13CB74950047A843 /* bottom_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = FC46A84913CB74950047A843 /* bottom_shadow.png */; };
+		FC46A84C13CB75110047A843 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC46A84B13CB75110047A843 /* iAd.framework */; };
+		FC46A85013CB764C0047A843 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC46A84E13CB764C0047A843 /* EventDetailViewController.m */; };
+		FC46A85113CB764C0047A843 /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC46A84F13CB764C0047A843 /* EventDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC18CAE914070C8B001B0041 /* MyCLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCLController.h; sourceTree = "<group>"; };
+		FC18CAEA14070C8B001B0041 /* MyCLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCLController.m; sourceTree = "<group>"; };
+		FC18CAED14070CA0001B0041 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FC18CAEF14070CC2001B0041 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FC46A82513CB72F20047A843 /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC46A82913CB72F20047A843 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC46A82B13CB72F20047A843 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC46A82D13CB72F20047A843 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		FC46A83113CB72F20047A843 /* Events-Info.plist */ = {isa = PBXFileReference; path = "Events-Info.plist"; sourceTree = "<group>"; };
+		FC46A83113CB72F20047A843 /* Events-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Events-Info.plist"; sourceTree = "<group>"; };
 		FC46A83313CB72F20047A843 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FC46A83513CB72F20047A843 /* Events-Prefix.pch */ = {isa = PBXFileReference; path = "Events-Prefix.pch"; sourceTree = "<group>"; };
+		FC46A83513CB72F20047A843 /* Events-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Events-Prefix.pch"; sourceTree = "<group>"; };
 		FC46A83613CB72F20047A843 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FC46A83813CB72F20047A843 /* EventsAppDelegate.h */ = {isa = PBXFileReference; path = EventsAppDelegate.h; sourceTree = "<group>"; };
+		FC46A83813CB72F20047A843 /* EventsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsAppDelegate.h; sourceTree = "<group>"; };
 		FC46A83913CB72F20047A843 /* EventsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsAppDelegate.m; sourceTree = "<group>"; };
 		FC46A83C13CB72F20047A843 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		FC46A83E13CB72F20047A843 /* EventsViewController.h */ = {isa = PBXFileReference; path = EventsViewController.h; sourceTree = "<group>"; };
+		FC46A83E13CB72F20047A843 /* EventsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		FC46A83F13CB72F20047A843 /* EventsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		FC46A84213CB72F20047A843 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EventsViewController.xib; sourceTree = "<group>"; };
+		FC46A84913CB74950047A843 /* bottom_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottom_shadow.png; sourceTree = "<group>"; };
+		FC46A84B13CB75110047A843 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		FC46A84D13CB764C0047A843 /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
+		FC46A84E13CB764C0047A843 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
+		FC46A84F13CB764C0047A843 /* EventDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC18CAF014070CC3001B0041 /* CoreLocation.framework in Frameworks */,
+				FC18CAEE14070CA0001B0041 /* MapKit.framework in Frameworks */,
+				FC46A84C13CB75110047A843 /* iAd.framework in Frameworks */,
 				FC46A82A13CB72F20047A843 /* UIKit.framework in Frameworks */,
 				FC46A82C13CB72F20047A843 /* Foundation.framework in Frameworks */,
 				FC46A82E13CB72F20047A843 /* CoreGraphics.framework in Frameworks */,
@@ -49,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC18CAF114070CCD001B0041 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				FC18CAE914070C8B001B0041 /* MyCLController.h */,
+				FC18CAEA14070C8B001B0041 /* MyCLController.m */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
 		FC46A81A13CB72F20047A843 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +97,9 @@
 		FC46A82813CB72F20047A843 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC18CAEF14070CC2001B0041 /* CoreLocation.framework */,
+				FC18CAED14070CA0001B0041 /* MapKit.framework */,
+				FC46A84B13CB75110047A843 /* iAd.framework */,
 				FC46A82913CB72F20047A843 /* UIKit.framework */,
 				FC46A82B13CB72F20047A843 /* Foundation.framework */,
 				FC46A82D13CB72F20047A843 /* CoreGraphics.framework */,
@@ -79,12 +110,16 @@
 		FC46A82F13CB72F20047A843 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				FC18CAF114070CCD001B0041 /* Location */,
 				FC46A83813CB72F20047A843 /* EventsAppDelegate.h */,
 				FC46A83913CB72F20047A843 /* EventsAppDelegate.m */,
 				FC46A83B13CB72F20047A843 /* MainWindow.xib */,
 				FC46A83E13CB72F20047A843 /* EventsViewController.h */,
 				FC46A83F13CB72F20047A843 /* EventsViewController.m */,
 				FC46A84113CB72F20047A843 /* EventsViewController.xib */,
+				FC46A84D13CB764C0047A843 /* EventDetailViewController.h */,
+				FC46A84E13CB764C0047A843 /* EventDetailViewController.m */,
+				FC46A84F13CB764C0047A843 /* EventDetailViewController.xib */,
 				FC46A83013CB72F20047A843 /* Supporting Files */,
 			);
 			path = Events;
@@ -93,6 +128,7 @@
 		FC46A83013CB72F20047A843 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FC46A84913CB74950047A843 /* bottom_shadow.png */,
 				FC46A83113CB72F20047A843 /* Events-Info.plist */,
 				FC46A83213CB72F20047A843 /* InfoPlist.strings */,
 				FC46A83513CB72F20047A843 /* Events-Prefix.pch */,
@@ -154,6 +190,8 @@
 				FC46A83413CB72F20047A843 /* InfoPlist.strings in Resources */,
 				FC46A83D13CB72F20047A843 /* MainWindow.xib in Resources */,
 				FC46A84313CB72F20047A843 /* EventsViewController.xib in Resources */,
+				FC46A84A13CB74950047A843 /* bottom_shadow.png in Resources */,
+				FC46A85113CB764C0047A843 /* EventDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +205,8 @@
 				FC46A83713CB72F20047A843 /* main.m in Sources */,
 				FC46A83A13CB72F20047A843 /* EventsAppDelegate.m in Sources */,
 				FC46A84013CB72F20047A843 /* EventsViewController.m in Sources */,
+				FC46A85013CB764C0047A843 /* EventDetailViewController.m in Sources */,
+				FC18CAEB14070C8B001B0041 /* MyCLController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,12 +276,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Events/Events-Prefix.pch";
 				INFOPLIST_FILE = "Events/Events-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -250,11 +292,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Events/Events-Prefix.pch";
 				INFOPLIST_FILE = "Events/Events-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -279,6 +323,7 @@
 				FC46A84813CB72F20047A843 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
