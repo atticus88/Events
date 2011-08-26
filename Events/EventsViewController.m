@@ -147,6 +147,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
  
  }*/
 
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    search.text=@"";
+    [searchBar resignFirstResponder];
+}
 
 
 @end
