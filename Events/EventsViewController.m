@@ -28,12 +28,15 @@
 
 #pragma mark - View lifecycle
 
-
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     locationController = [[MyCLController alloc] init];
 	locationController.delegate = self;
 	[locationController.locationManager startUpdatingLocation];	
+    
+    //CLLocation *location = [[CLLocation alloc] initWithLatitude:42 longitude:-50];
+    //[locationController locationManager:locationController.locationManager didUpdateToLocation:location fromLocation:nil];
+    
 
     [super viewDidLoad];
 }
@@ -149,7 +152,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
 {
-    search.text=@"";
+    search.text = @"";
     [searchBar resignFirstResponder];
 }
 

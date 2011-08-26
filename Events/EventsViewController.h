@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "MyCLController.h"
+#import "MyCLController.h"
 #import <CoreLocation/CoreLocation.h>
 
-@interface EventsViewController : UIViewController <UITableViewDelegate, CLLocationManagerDelegate> {
-   // MyCLController *locationController;
+@interface EventsViewController : UIViewController <UITableViewDelegate, MyCLControllerDelegate> {
+    MyCLController *locationController;
     UISearchBar *search;
 }
 
