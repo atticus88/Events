@@ -1,5 +1,4 @@
 # Events App
-***
 
 #GPS Not Working in Simulator
 
