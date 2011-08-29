@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "MyCLController.h"
 #import <CoreLocation/CoreLocation.h>
+#import "HTTPRequest.h"
 
-@interface EventsViewController : UIViewController <UITableViewDelegate, MyCLControllerDelegate> {
+@interface EventsViewController : UIViewController <UITableViewDelegate, MyCLControllerDelegate, HTTPRequestDelegate> {
     MyCLController *locationController;
     UISearchBar *search;
 }
@@ -19,5 +20,6 @@
 
 - (void)locationUpdate:(CLLocation *)location; 
 - (void)locationError:(NSError *)error;
+
 
 @end

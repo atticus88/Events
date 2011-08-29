@@ -9,6 +9,8 @@
 #import "EventsViewController.h"
 #import "EventDetailViewController.h"
 #import "MyCLController.h"
+#import "HTTPRequest.h"
+#import "JSON.h"
 
 @implementation EventsViewController
 @synthesize search;
@@ -34,8 +36,8 @@
 	locationController.delegate = self;
 	[locationController.locationManager startUpdatingLocation];	
     
-    //CLLocation *location = [[CLLocation alloc] initWithLatitude:42 longitude:-50];
-    //[locationController locationManager:locationController.locationManager didUpdateToLocation:location fromLocation:nil];
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:42 longitude:-50];
+    [locationController locationManager:locationController.locationManager didUpdateToLocation:location fromLocation:nil];
     
 
     [super viewDidLoad];
@@ -44,17 +46,19 @@
 - (void)locationUpdate:(CLLocation *)location {
     NSString *locationString = [NSString stringWithFormat:@"%.6f,%.6f", location.coordinate.latitude, location.coordinate.longitude];
     NSLog(@"%@", locationString);
+    
    // dataReady = NO;
-    //HTTPRequest *request = [[HTTPRequest alloc] init];
-    //[request setDelegate:self];
-    
-    // Generate the URL and get the data from Google Places
-	// Found non-signed URL from: http://jasarien.com/?p=412
-   // [request startRequest:[NSString stringWithFormat:@"http://ajax.googleapis.com/ajax/services/search/local?v=1.0&rsz=8&sll=%@&q=restaurant", locationString]];
-    
-    //Used for testing Golden Dynesty 
-    //[request startRequest:[NSString stringWithFormat:@"http://ajax.googleapis.com/ajax/services/search/local?v=1.0&rsz=8&sll=%@&q=restaurant%%20Golden", locationString]];
-    //[request release];
+    HTTPRequest *request = [[HTTPRequest alloc] init];
+    [request setDelegate:self];
+    [request startRequest:@"http://www.google.com" animated:YES];
+    [request release];
+}
+
+- (void)connectionSuccessful:(BOOL)success request:(id)request {
+    HTTPRequest *response = (HTTPRequest *)request;
+    NSString *jsonString = [[NSString alloc] initWithData:response.buffer encoding:NSUTF8StringEncoding];
+	//NSDictionary *results = [jsonString JSONValue];
+    NSLog(@"%@", jsonString);
 }
 
 - (void)locationError:(NSError *)error {

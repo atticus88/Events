@@ -8,6 +8,9 @@
 
 #import "EventDetailViewController.h"
 
+#import <EventKitUI/EventKitUI.h>
+#import <EventKit/EventKit.h>
+
 
 @implementation EventDetailViewController
 
@@ -24,6 +27,7 @@
 {
     [super dealloc];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -89,10 +93,42 @@ numberOfRowsInSection:(NSInteger)section {
 	return cell;
 }
 
+- (void)createEvent {
+	EKEventStore *eventStore = [[EKEventStore alloc] init];
+	
+	EKEvent *event  = [EKEvent eventWithEventStore:eventStore];
+	event.startDate = [NSDate date]; 
+	event.endDate = [NSDate date];
+	event.title = @"Test";
+	//event.location = appDelegate.apCreator.testingCenter.NAME;
+	NSArray *alarmArray = [[NSArray alloc] initWithObjects:[EKAlarm alarmWithRelativeOffset:-1*60*60], nil];
+	event.alarms = alarmArray;
+	EKEventEditViewController *controller = [[EKEventEditViewController alloc] init];
+	controller.eventStore = eventStore;
+	controller.editViewDelegate = self;
+	controller.event = event;
+	[alarmArray release];
+	//[appDelegate.appointmentAdd pushViewController:controller animated:YES];
+	[self presentModalViewController:controller animated:YES];
+    
+}
+
+
+- (void)eventEditViewController:(EKEventEditViewController *)controller didCompleteWithAction:(EKEventEditViewAction)action {
+	if (action == EKEventEditViewActionSaved) {
+		//[self saveAppointment];
+        [self dismissModalViewControllerAnimated:YES];
+	} else {
+		[self dismissModalViewControllerAnimated:YES];
+	}
+}
+
+
 
 -(void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self createEvent];
 }
 
 -(NSInteger)add:(NSInteger)val1 secondValue:(NSInteger)val2 {
