@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B1494AA140C37C1004C1F21 /* CustomAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1494A9140C37C1004C1F21 /* CustomAdView.m */; };
 		FC18CAEB14070C8B001B0041 /* MyCLController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC18CAEA14070C8B001B0041 /* MyCLController.m */; };
 		FC18CAEE14070CA0001B0041 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC18CAED14070CA0001B0041 /* MapKit.framework */; };
 		FC18CAF014070CC3001B0041 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC18CAEF14070CC2001B0041 /* CoreLocation.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B1494A8140C37C1004C1F21 /* CustomAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAdView.h; sourceTree = "<group>"; };
+		6B1494A9140C37C1004C1F21 /* CustomAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAdView.m; sourceTree = "<group>"; };
 		FC18CAE914070C8B001B0041 /* MyCLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCLController.h; sourceTree = "<group>"; };
 		FC18CAEA14070C8B001B0041 /* MyCLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCLController.m; sourceTree = "<group>"; };
 		FC18CAED14070CA0001B0041 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -96,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B1494A6140C378E004C1F21 /* CustomAdView */ = {
+			isa = PBXGroup;
+			children = (
+				6B1494A8140C37C1004C1F21 /* CustomAdView.h */,
+				6B1494A9140C37C1004C1F21 /* CustomAdView.m */,
+			);
+			name = CustomAdView;
+			sourceTree = "<group>";
+		};
 		FC18CAF114070CCD001B0041 /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +181,7 @@
 		FC46A82F13CB72F20047A843 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				6B1494A6140C378E004C1F21 /* CustomAdView */,
 				FC228501140C303600E2444B /* JSON */,
 				FC2284FB140C2CC700E2444B /* HTTP */,
 				FC18CAF114070CCD001B0041 /* Location */,
@@ -275,6 +288,7 @@
 				FC228512140C303600E2444B /* SBJsonBase.m in Sources */,
 				FC228513140C303600E2444B /* SBJsonParser.m in Sources */,
 				FC228514140C303600E2444B /* SBJsonWriter.m in Sources */,
+				6B1494AA140C37C1004C1F21 /* CustomAdView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
