@@ -11,6 +11,7 @@
 #import "MyCLController.h"
 #import "HTTPRequest.h"
 #import "JSON.h"
+#import "CustomAdView.h"
 
 @implementation EventsViewController
 @synthesize search;
@@ -179,6 +180,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     / George written code so watch out!
     */
     //customAd = [[CustomAdView alloc] init];
+    
+    //Klint written code should work.
+    // This will make your init statment print 
+    CustomAdView *adView = [[CustomAdView alloc] init];
+    adView.frame = CGRectMake(0, 0, 320, 50);
     
     
     
