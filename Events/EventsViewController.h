@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MyCLController.h"
 #import <CoreLocation/CoreLocation.h>
+#import <iAd/iAd.h>
 #import "HTTPRequest.h"
 
 @interface EventsViewController : UIViewController <UITableViewDelegate, MyCLControllerDelegate, HTTPRequestDelegate> {
