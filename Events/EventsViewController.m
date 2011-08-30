@@ -160,5 +160,22 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [searchBar resignFirstResponder];
 }
 
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
+    //NSLog(@"Show");
+    [UIView beginAnimations:@"showBanner" context:NULL];
+    [UIView setAnimationDuration:.7];
+    //self.bannerView.frame = CGRectMake(0, 0, 320, 50);
+    [UIView commitAnimations];
+    }
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+    //NSLog(@"Error");
+    [UIView beginAnimations:@"hideBanner" context:NULL];
+    [UIView setAnimationDuration:.7];
+    //self.bannerView.frame = CGRectMake(0, -50, 320, 50);
+    [UIView commitAnimations];
+}
+
+
 
 @end

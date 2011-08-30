@@ -10,6 +10,7 @@
 #import "MyCLController.h"
 #import <CoreLocation/CoreLocation.h>
 #import "HTTPRequest.h"
+#import <iAd/iAd.h>
 
 @interface EventsViewController : UIViewController <UITableViewDelegate, MyCLControllerDelegate, HTTPRequestDelegate> {
     MyCLController *locationController;
