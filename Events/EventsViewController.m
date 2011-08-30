@@ -174,6 +174,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [UIView setAnimationDuration:.7];
     //self.bannerView.frame = CGRectMake(0, -50, 320, 50);
     [UIView commitAnimations];
+    
+    /*Instantiating Custom ad view
+    / George written code so watch out!
+    */
+    //customAd = [[CustomAdView alloc] init];
+    
+    
+    
 }
 
 

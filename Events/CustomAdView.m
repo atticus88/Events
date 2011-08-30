@@ -17,6 +17,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        NSLog(@"Custom ad was initiated");
     }
     return self;
 }

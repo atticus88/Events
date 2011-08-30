@@ -11,6 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "HTTPRequest.h"
 #import <iAd/iAd.h>
+#import "CustomAdView.h"
 
 @interface EventsViewController : UIViewController <UITableViewDelegate, MyCLControllerDelegate, HTTPRequestDelegate> {
     MyCLController *locationController;
