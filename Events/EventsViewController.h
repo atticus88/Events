@@ -15,6 +15,7 @@
 
 @interface EventsViewController : UIViewController <UITableViewDelegate, MyCLControllerDelegate, HTTPRequestDelegate, ADBannerViewDelegate> {
     MyCLController *locationController;
+    CustomAdView *customAd;
     ADBannerView *bannerView;
     UISearchBar *search;
 }

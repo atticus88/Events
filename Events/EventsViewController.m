@@ -117,7 +117,8 @@ numberOfRowsInSection:(NSInteger)section {
 		//cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:TableID];
 		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:TableID] autorelease];
 	}
-	
+    //cell.contentView.backgroundColor = [UIColor whiteColor];
+    //cell.textLabel.backgroundColor = [UIColor whiteColor];
 	cell.textLabel.text = @"Event";
     
 	return cell;
@@ -167,7 +168,10 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [UIView setAnimationDuration:.7];
     //self.bannerView.frame = CGRectMake(0, 0, 320, 50);
     [UIView commitAnimations];
-    }
+
+    [customAd release];
+    customAd = nil;
+}
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
     //NSLog(@"Error");
@@ -183,11 +187,10 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     //Klint written code should work.
     // This will make your init statment print 
-    CustomAdView *adView = [[CustomAdView alloc] init];
-    adView.frame = CGRectMake(0, 0, 320, 50);
-    
-    
-    
+    if (!customAd) {
+        customAd = [[CustomAdView alloc] init];
+        customAd.frame = CGRectMake(0, 0, 320, 50);
+    }
 }
 
 
