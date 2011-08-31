@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomAdView : UIView{
+@interface CustomAdView : UIView {
     UIImageView *adImage;
 }
 

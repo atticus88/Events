@@ -32,9 +32,20 @@
 
 - (void)connectionSuccessful:(BOOL)success request:(id)request {
     HTTPRequest *response = (HTTPRequest *)request;
-    NSString *jsonString = [[NSString alloc] initWithData:response.buffer encoding:NSUTF8StringEncoding];
-	//NSDictionary *results = [jsonString JSONValue];
-    NSLog(@"%@", jsonString);
+    if (response.type == HTTPRequestAdImage) {
+        
+    } else {
+        NSString *jsonString = [[NSString alloc] initWithData:response.buffer encoding:NSUTF8StringEncoding];
+        //NSDictionary *results = [jsonString JSONValue];
+        NSLog(@"%@", jsonString);
+    }
+}
+
+- (void)loadAdImageWithURL:(NSString *)url {
+    HTTPRequest *request = [[HTTPRequest alloc] init];
+    [request setDelegate:self];
+    [request startRequest:@"http://www.google.com" animated:NO];
+    [request release];
 }
 
 /*

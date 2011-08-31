@@ -168,7 +168,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [UIView setAnimationDuration:.7];
     //self.bannerView.frame = CGRectMake(0, 0, 320, 50);
     [UIView commitAnimations];
-
+    
+    //Pull from superview/release 
     [customAd release];
     customAd = nil;
 }

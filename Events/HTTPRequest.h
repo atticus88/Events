@@ -10,7 +10,7 @@
 
 typedef enum {
    HTTPRequestDefault,
-   HTTPRequestSOAP
+   HTTPRequestAdImage
 } RequestType;
 
 @protocol HTTPRequestDelegate <NSObject>
