@@ -13,12 +13,14 @@
 #import <iAd/iAd.h>
 #import "CustomAdView.h"
 
-@interface EventsViewController : UIViewController <UITableViewDelegate, MyCLControllerDelegate, HTTPRequestDelegate> {
+@interface EventsViewController : UIViewController <UITableViewDelegate, MyCLControllerDelegate, HTTPRequestDelegate, ADBannerViewDelegate> {
     MyCLController *locationController;
+    ADBannerView *bannerView;
     UISearchBar *search;
 }
 
 @property (nonatomic, retain) IBOutlet UISearchBar *search;
+@property (nonatomic, retain) IBOutlet ADBannerView *bannerView;
 
 - (void)locationUpdate:(CLLocation *)location; 
 - (void)locationError:(NSError *)error;

@@ -14,7 +14,7 @@
 #import "CustomAdView.h"
 
 @implementation EventsViewController
-@synthesize search;
+@synthesize search, bannerView;
 
 - (void)dealloc
 {
