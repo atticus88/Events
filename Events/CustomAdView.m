@@ -18,12 +18,26 @@
     if (self) {
         // Initialization code
         NSLog(@"Custom ad was initiated");
+        self.userInteractionEnabled = YES;
+        adImage = [[UIImageView alloc] init];
+        adImage.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+        adButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+        [adButton addTarget:self action:@selector(loadAdPage) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:adImage];
+        [self addSubview:adButton];
+        
+        adTime = [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(getAdFromServer) userInfo:nil repeats:YES];
+        
     }
     return self;
 }
 
-- (void)getAdFromServer
-{
+
+- (void)loadAdPage {
+    NSLog(@"Called");
+    
+}
+- (void)getAdFromServer {
     HTTPRequest *request = [[HTTPRequest alloc] init];
     [request setDelegate:self];
     [request startRequest:@"http://www.google.com" animated:NO];
@@ -33,18 +47,20 @@
 - (void)connectionSuccessful:(BOOL)success request:(id)request {
     HTTPRequest *response = (HTTPRequest *)request;
     if (response.type == HTTPRequestAdImage) {
-        
+        adImage.image = [UIImage imageWithData:response.buffer];
     } else {
         NSString *jsonString = [[NSString alloc] initWithData:response.buffer encoding:NSUTF8StringEncoding];
         //NSDictionary *results = [jsonString JSONValue];
         NSLog(@"%@", jsonString);
+        [self loadAdImageWithURL:@"http://cdn.macrumors.com/article/2010/07/01/123339-nissan_iad_banner.jpg"];
     }
 }
 
 - (void)loadAdImageWithURL:(NSString *)url {
     HTTPRequest *request = [[HTTPRequest alloc] init];
     [request setDelegate:self];
-    [request startRequest:@"http://www.google.com" animated:NO];
+    [request startRequest:url animated:NO];
+    [request setType:HTTPRequestAdImage];
     [request release];
 }
 

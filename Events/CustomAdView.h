@@ -10,6 +10,8 @@
 
 @interface CustomAdView : UIView {
     UIImageView *adImage;
+    UIButton *adButton;
+    NSTimer *adTime;
 }
 
 @end

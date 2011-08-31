@@ -13,6 +13,9 @@
 #import "JSON.h"
 #import "CustomAdView.h"
 
+#define hiddenAd CGRectMake(0, 416, 320, 50)
+#define showAd CGRectMake(0, 366, 320, 50)
+
 @implementation EventsViewController
 @synthesize search, bannerView;
 
@@ -166,10 +169,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //NSLog(@"Show");
     [UIView beginAnimations:@"showBanner" context:NULL];
     [UIView setAnimationDuration:.7];
-    //self.bannerView.frame = CGRectMake(0, 0, 320, 50);
+    self.bannerView.frame = showAd;//CGRectMake(0, 366, 320, 50);
     [UIView commitAnimations];
     
     //Pull from superview/release 
+    [customAd removeFromSuperview];
     [customAd release];
     customAd = nil;
 }
@@ -178,7 +182,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //NSLog(@"Error");
     [UIView beginAnimations:@"hideBanner" context:NULL];
     [UIView setAnimationDuration:.7];
-    //self.bannerView.frame = CGRectMake(0, -50, 320, 50);
+    self.bannerView.frame = hiddenAd;//CGRectMake(0, 416, 320, 50);
     [UIView commitAnimations];
     
     /*Instantiating Custom ad view
@@ -189,11 +193,21 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //Klint written code should work.
     // This will make your init statment print 
     if (!customAd) {
-        customAd = [[CustomAdView alloc] init];
-        customAd.frame = CGRectMake(0, 0, 320, 50);
+        customAd = [[CustomAdView alloc] initWithFrame:hiddenAd];
+        customAd.backgroundColor = [UIColor whiteColor];
+        ///customAd.frame = hiddenAd;//CGRectMake(0, 416, 320, 50);
+        [self.view addSubview:customAd];
+        
+        [UIView beginAnimations:@"showCustomAd" context:NULL];
+        [UIView setAnimationDuration:.7];
+        customAd.frame = showAd;//CGRectMake(0, 366, 320, 50);
+        [UIView commitAnimations];
+        
+        
     }
 }
 
+//- (void)
 
 
 @end
