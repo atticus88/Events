@@ -7,10 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 
 @interface EventDetailViewController : UIViewController {
+    UIView *contents;
+    UIView *touchDetector;
+    MKMapView *map;
+    UIImageView *shadow;
+    
     
 }
+
+@property (nonatomic, retain) IBOutlet UIImageView *shadow;
+@property (nonatomic, retain) IBOutlet UIView *touchDetector;
+@property (nonatomic, retain) IBOutlet UIView *contents;
+@property (nonatomic, retain) IBOutlet MKMapView *map;
 
 @end

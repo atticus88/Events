@@ -18,13 +18,18 @@
     CustomAdView *customAd;
     ADBannerView *bannerView;
     UISearchBar *search;
+    NSMutableArray *list;
+    UITableView *eventList;
 }
 
 @property (nonatomic, retain) IBOutlet UISearchBar *search;
 @property (nonatomic, retain) IBOutlet ADBannerView *bannerView;
+@property (nonatomic, retain) IBOutlet UITableView *eventList;
 
 - (void)locationUpdate:(CLLocation *)location; 
 - (void)locationError:(NSError *)error;
+- (void)loadAdPage:(NSString *)url;
 
+-(IBAction)scopeChanged:(id)sender;
 
 @end

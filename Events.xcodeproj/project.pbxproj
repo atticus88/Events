@@ -33,6 +33,8 @@
 		FC46A84C13CB75110047A843 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC46A84B13CB75110047A843 /* iAd.framework */; };
 		FC46A85013CB764C0047A843 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC46A84E13CB764C0047A843 /* EventDetailViewController.m */; };
 		FC46A85113CB764C0047A843 /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC46A84F13CB764C0047A843 /* EventDetailViewController.xib */; };
+		FC9C6A06140EE2DD00708FDF /* CustomAdWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9C6A04140EE2DD00708FDF /* CustomAdWebView.m */; };
+		FC9C6A07140EE2DD00708FDF /* CustomAdWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9C6A05140EE2DD00708FDF /* CustomAdWebView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,9 @@
 		FC46A84D13CB764C0047A843 /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
 		FC46A84E13CB764C0047A843 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
 		FC46A84F13CB764C0047A843 /* EventDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
+		FC9C6A03140EE2DD00708FDF /* CustomAdWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAdWebView.h; sourceTree = "<group>"; };
+		FC9C6A04140EE2DD00708FDF /* CustomAdWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAdWebView.m; sourceTree = "<group>"; };
+		FC9C6A05140EE2DD00708FDF /* CustomAdWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomAdWebView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +107,9 @@
 		6B1494A6140C378E004C1F21 /* CustomAdView */ = {
 			isa = PBXGroup;
 			children = (
+				FC9C6A03140EE2DD00708FDF /* CustomAdWebView.h */,
+				FC9C6A04140EE2DD00708FDF /* CustomAdWebView.m */,
+				FC9C6A05140EE2DD00708FDF /* CustomAdWebView.xib */,
 				6B1494A8140C37C1004C1F21 /* CustomAdView.h */,
 				6B1494A9140C37C1004C1F21 /* CustomAdView.m */,
 			);
@@ -266,6 +274,7 @@
 				FC46A84313CB72F20047A843 /* EventsViewController.xib in Resources */,
 				FC46A84A13CB74950047A843 /* bottom_shadow.png in Resources */,
 				FC46A85113CB764C0047A843 /* EventDetailViewController.xib in Resources */,
+				FC9C6A07140EE2DD00708FDF /* CustomAdWebView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +298,7 @@
 				FC228513140C303600E2444B /* SBJsonParser.m in Sources */,
 				FC228514140C303600E2444B /* SBJsonWriter.m in Sources */,
 				6B1494AA140C37C1004C1F21 /* CustomAdView.m in Sources */,
+				FC9C6A06140EE2DD00708FDF /* CustomAdWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

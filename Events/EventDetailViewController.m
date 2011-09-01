@@ -13,6 +13,7 @@
 
 
 @implementation EventDetailViewController
+@synthesize contents, map, shadow, touchDetector;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -158,6 +159,47 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 /*- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
  
  }*/
+
+- (void)receivedTouches:(NSSet *)touches withEvent:event {
+	UITouch *touch = [touches anyObject];
+	CGPoint location = [touch locationInView:self.view];
+    if (CGRectContainsPoint(contents.frame, location)) {
+        [self makeMapLittle];
+        touchDetector.hidden = NO;
+    } else { 
+        [self makeMapBig];
+        touchDetector.hidden = YES;
+    }
+
+}
+
+- (void)makeMapLittle {
+    [UIView beginAnimations:@"hideBanner" context:NULL];
+    [UIView setAnimationDuration:.7];
+    self.contents.frame = CGRectMake(0, 0, 320, 301);//CGRectMake(0, 416, 320, 50);
+    self.map.frame = CGRectMake(0, 301, 320, 116);
+    self.shadow.frame = CGRectMake(0, 301, 320, 18);
+    [UIView commitAnimations];
+}
+
+- (void)makeMapBig {
+    [UIView beginAnimations:@"hideBanner" context:NULL];
+    [UIView setAnimationDuration:.7];
+    self.contents.frame = CGRectMake(0, 0, 320, 125);//CGRectMake(0, 416, 320, 50);
+    self.map.frame = CGRectMake(0, 125, 320, 292);
+    self.shadow.frame = CGRectMake(0, 125, 320, 18);
+    [UIView commitAnimations];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+	[self receivedTouches:touches withEvent:event];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+}
 
 
 

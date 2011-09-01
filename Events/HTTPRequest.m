@@ -54,21 +54,27 @@
 }
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error:" 
+    //if (!self.type == HTTPRequestAdImage) {
+        
+
+	/*UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error:" 
                                                     message:@"Unable to estabish a connection" 
                                                    delegate:self 
                                           cancelButtonTitle:@"OK" otherButtonTitles:nil];
 	[alert show];
-	[alert release];
+	[alert release];*/
 	[self connectionSuccessful:NO];
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    //}
 }
 
 //Notifies delegate that connection is ending sends self for further parsing of data
 - (void)connectionSuccessful:(BOOL)success {
-	if([[self delegate] respondsToSelector:@selector(connectionSuccessful:request:)]) {
-		[[self delegate] connectionSuccessful:success request:self];
-	}
+    if (success) {
+        if([[self delegate] respondsToSelector:@selector(connectionSuccessful:request:)]) {
+            [[self delegate] connectionSuccessful:success request:self];
+        }
+    }
 }
 
 @end
