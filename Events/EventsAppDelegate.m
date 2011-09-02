@@ -16,6 +16,8 @@
 
 @synthesize viewController=_viewController;
 
+@synthesize test, selectedEvent;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.

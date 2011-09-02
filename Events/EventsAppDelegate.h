@@ -11,11 +11,16 @@
 //@class EventsViewController;
 
 @interface EventsAppDelegate : NSObject <UIApplicationDelegate> {
-
+    NSString *test;
+    NSMutableArray *selectedEvent;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
 @property (nonatomic, retain) IBOutlet UINavigationController *viewController;
+
+@property (nonatomic, retain) NSString *test;
+
+@property (nonatomic, retain) NSMutableArray *selectedEvent;
 
 @end

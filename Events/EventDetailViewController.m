@@ -13,7 +13,7 @@
 
 
 @implementation EventDetailViewController
-@synthesize contents, map, shadow, touchDetector;
+@synthesize contents, map, shadow, touchDetector, eventDelegate, name, description;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,6 +44,20 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    //Grabbing event delegate
+    eventDelegate = (EventsAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    NSString *eventName = [[self eventDelegate].selectedEvent  objectForKey:@"name"];
+    NSString *eventDescription = [[self eventDelegate].selectedEvent  objectForKey:@"description"];
+    
+    name.text = eventName;
+    description.text = eventDescription;
+    
+    //Hacky way of top-aligning description label
+    description.numberOfLines = 0;
+    description.frame = CGRectMake(46, 71, 231, 156);
+    [description sizeToFit];
 }
 
 - (void)viewDidUnload
@@ -165,15 +179,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	CGPoint location = [touch locationInView:self.view];
     if (CGRectContainsPoint(contents.frame, location)) {
         [self makeMapLittle];
-        touchDetector.hidden = NO;
     } else { 
         [self makeMapBig];
-        touchDetector.hidden = YES;
     }
 
 }
 
 - (void)makeMapLittle {
+    touchDetector.hidden = NO;
     [UIView beginAnimations:@"hideBanner" context:NULL];
     [UIView setAnimationDuration:.7];
     self.contents.frame = CGRectMake(0, 0, 320, 301);//CGRectMake(0, 416, 320, 50);
@@ -183,6 +196,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 - (void)makeMapBig {
+    touchDetector.hidden = YES;
     [UIView beginAnimations:@"hideBanner" context:NULL];
     [UIView setAnimationDuration:.7];
     self.contents.frame = CGRectMake(0, 0, 320, 125);//CGRectMake(0, 416, 320, 50);
@@ -201,6 +215,36 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 }
 
+- (IBAction)calButtonPressed:(id)sender
+{
+    [self makeMapLittle];
+    [self createEvent];
+}
 
+//Delegate method for mapview
+- (void)viewWillAppear:(BOOL)animated {  
+    // 1
+    //Assigning coordinates
+    CLLocationCoordinate2D zoomLocation;
+    zoomLocation.latitude = [[[self eventDelegate].selectedEvent objectForKey: @"lat"] floatValue];
+    zoomLocation.longitude = [[[self eventDelegate].selectedEvent objectForKey: @"lng"] floatValue];
+
+    // 2
+    //:Assigning viewing region
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 100, 100);
+    // 3
+    //adjusting map
+    MKCoordinateRegion adjustedRegion = [map regionThatFits:viewRegion];                
+    // 4
+    //zooming map in
+    [map setRegion:adjustedRegion animated:YES]; 
+    
+    //dropping a pin in.
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    [annotation setCoordinate:zoomLocation];
+                                     
+    [self.map addAnnotation:annotation];
+    [annotation release];
+}
 
 @end

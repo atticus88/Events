@@ -12,6 +12,7 @@
 #import "HTTPRequest.h"
 #import <iAd/iAd.h>
 #import "CustomAdView.h"
+#import "EventsAppDelegate.h"
 
 @interface EventsViewController : UIViewController <UITableViewDelegate, MyCLControllerDelegate, HTTPRequestDelegate, ADBannerViewDelegate> {
     MyCLController *locationController;
@@ -20,11 +21,13 @@
     UISearchBar *search;
     NSMutableArray *list;
     UITableView *eventList;
+    EventsAppDelegate *eventDelegate;
 }
 
 @property (nonatomic, retain) IBOutlet UISearchBar *search;
 @property (nonatomic, retain) IBOutlet ADBannerView *bannerView;
 @property (nonatomic, retain) IBOutlet UITableView *eventList;
+@property (nonatomic, retain) EventsAppDelegate *eventDelegate;
 
 - (void)locationUpdate:(CLLocation *)location; 
 - (void)locationError:(NSError *)error;
