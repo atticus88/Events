@@ -199,9 +199,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     touchDetector.hidden = YES;
     [UIView beginAnimations:@"hideBanner" context:NULL];
     [UIView setAnimationDuration:.7];
-    self.contents.frame = CGRectMake(0, 0, 320, 125);//CGRectMake(0, 416, 320, 50);
-    self.map.frame = CGRectMake(0, 125, 320, 292);
-    self.shadow.frame = CGRectMake(0, 125, 320, 18);
+    self.contents.frame = CGRectMake(0, 0, 320, 92);//CGRectMake(0, 416, 320, 50);
+    self.map.frame = CGRectMake(0, 92, 320, 324);
+    self.shadow.frame = CGRectMake(0, 92, 320, 18);
     [UIView commitAnimations];
 }
 
