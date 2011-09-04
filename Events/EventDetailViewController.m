@@ -13,7 +13,7 @@
 
 
 @implementation EventDetailViewController
-@synthesize contents, map, shadow, touchDetector, eventDelegate, name, description;
+@synthesize contents, map, shadow, touchDetector, /*eventDelegate*/eventInfo, name, description;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,10 +46,10 @@
     // Do any additional setup after loading the view from its nib.
     
     //Grabbing event delegate
-    eventDelegate = (EventsAppDelegate *)[[UIApplication sharedApplication] delegate];
+   // eventDelegate = (EventsAppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    NSString *eventName = [[self eventDelegate].selectedEvent  objectForKey:@"name"];
-    NSString *eventDescription = [[self eventDelegate].selectedEvent  objectForKey:@"description"];
+    NSString *eventName = [eventInfo objectForKey:@"name"];//[[self eventDelegate].selectedEvent  objectForKey:@"name"];
+    NSString *eventDescription = [eventInfo objectForKey:@"description"]; //[[self eventDelegate].selectedEvent  objectForKey:@"description"];
     
     name.text = eventName;
     description.text = eventDescription;
@@ -226,8 +226,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 1
     //Assigning coordinates
     CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = [[[self eventDelegate].selectedEvent objectForKey: @"lat"] floatValue];
-    zoomLocation.longitude = [[[self eventDelegate].selectedEvent objectForKey: @"lng"] floatValue];
+    zoomLocation.latitude = [[eventInfo objectForKey: @"lat"] floatValue];
+    zoomLocation.longitude = [[eventInfo objectForKey: @"lng"] floatValue];
 
     // 2
     //:Assigning viewing region

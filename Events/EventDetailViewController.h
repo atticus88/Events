@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-#import "EventsAppDelegate.h"
+//#import "EventsAppDelegate.h"
 
 
 @interface EventDetailViewController : UIViewController <MKMapViewDelegate> {
@@ -20,8 +20,9 @@
     UILabel *name;
     UILabel *description;
     //MKAnnotation
+    NSDictionary *eventInfo;
     
-    EventsAppDelegate *eventDelegate;
+    //EventsAppDelegate *eventDelegate;
 }
 
 @property (nonatomic, retain) IBOutlet UIImageView *shadow;
@@ -30,7 +31,9 @@
 @property (nonatomic, retain) IBOutlet MKMapView *map;
 @property (nonatomic, retain) IBOutlet UILabel *name;
 @property (nonatomic, retain) IBOutlet UILabel *description;
-@property (nonatomic, retain) EventsAppDelegate *eventDelegate;
+
+@property (nonatomic, retain) NSDictionary *eventInfo;
+//@property (nonatomic, retain) EventsAppDelegate *eventDelegate;
 
 - (IBAction)calButtonPressed:(id)sender;
 
