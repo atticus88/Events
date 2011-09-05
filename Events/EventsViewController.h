@@ -21,13 +21,13 @@
     UISearchBar *search;
     NSMutableArray *list;
     UITableView *eventList;
-    EventsAppDelegate *eventDelegate;
+    //EventsAppDelegate *eventDelegate;
 }
 
 @property (nonatomic, retain) IBOutlet UISearchBar *search;
 @property (nonatomic, retain) IBOutlet ADBannerView *bannerView;
 @property (nonatomic, retain) IBOutlet UITableView *eventList;
-@property (nonatomic, retain) EventsAppDelegate *eventDelegate;
+//@property (nonatomic, retain) EventsAppDelegate *eventDelegate;
 
 - (void)locationUpdate:(CLLocation *)location; 
 - (void)locationError:(NSError *)error;
