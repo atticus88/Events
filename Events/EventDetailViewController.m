@@ -13,7 +13,7 @@
 
 
 @implementation EventDetailViewController
-@synthesize contents, map, shadow, touchDetector, /*eventDelegate*/eventInfo, name, description;
+@synthesize contents, map, shadow, touchDetector, eventDelegate, name, description;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,10 +46,10 @@
     // Do any additional setup after loading the view from its nib.
     
     //Grabbing event delegate
-   // eventDelegate = (EventsAppDelegate *)[[UIApplication sharedApplication] delegate];
+    eventDelegate = (EventsAppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    NSString *eventName = [eventInfo objectForKey:@"name"];//[[self eventDelegate].selectedEvent  objectForKey:@"name"];
-    NSString *eventDescription = [eventInfo objectForKey:@"description"]; //[[self eventDelegate].selectedEvent  objectForKey:@"description"];
+    NSString *eventName = [[self eventDelegate].selectedEvent  objectForKey:@"name"];
+    NSString *eventDescription = [[self eventDelegate].selectedEvent  objectForKey:@"description"];
     
     name.text = eventName;
     description.text = eventDescription;
@@ -199,9 +199,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     touchDetector.hidden = YES;
     [UIView beginAnimations:@"hideBanner" context:NULL];
     [UIView setAnimationDuration:.7];
-    self.contents.frame = CGRectMake(0, 0, 320, 92);//CGRectMake(0, 416, 320, 50);
-    self.map.frame = CGRectMake(0, 92, 320, 324);
-    self.shadow.frame = CGRectMake(0, 92, 320, 18);
+    self.contents.frame = CGRectMake(0, 0, 320, 87);//CGRectMake(0, 416, 320, 50);
+    self.map.frame = CGRectMake(0, 87, 320, 329);
+    self.shadow.frame = CGRectMake(0, 87, 320, 18);
     [UIView commitAnimations];
 }
 
@@ -226,8 +226,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 1
     //Assigning coordinates
     CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = [[eventInfo objectForKey: @"lat"] floatValue];
-    zoomLocation.longitude = [[eventInfo objectForKey: @"lng"] floatValue];
+    zoomLocation.latitude = [[[self eventDelegate].selectedEvent objectForKey: @"lat"] floatValue];
+    zoomLocation.longitude = [[[self eventDelegate].selectedEvent objectForKey: @"lng"] floatValue];
 
     // 2
     //:Assigning viewing region

@@ -18,7 +18,7 @@
 #define showAd CGRectMake(0, 366, 320, 50)
 
 @implementation EventsViewController
-@synthesize search, bannerView, eventList;//, eventDelegate;
+@synthesize search, bannerView, eventList, eventDelegate;
 
 - (void)dealloc
 {
@@ -45,8 +45,8 @@
     [locationController locationManager:locationController.locationManager didUpdateToLocation:location fromLocation:nil];
     list = [[NSMutableArray alloc] init];
 
-   // eventDelegate = (EventsAppDelegate *)[[UIApplication sharedApplication] delegate];
-    //[self eventDelegate].test = @"I am testing this thing";
+    eventDelegate = (EventsAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [self eventDelegate].test = @"I am testing this thing";
     
     [super viewDidLoad];
 }
@@ -143,12 +143,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger row = [indexPath row];
     
     //Set delegate's selected event to the selected row's event
-    //[self eventDelegate].selectedEvent = [list objectAtIndex:row];
+    [self eventDelegate].selectedEvent = [list objectAtIndex:row];
     
     //Instantiate EventDetailViewController and push on to navigation controller stack. Exit
     //search if engaged
     EventDetailViewController *detail = [[EventDetailViewController alloc] initWithNibName:@"EventDetailViewController" bundle:nil];
-    [detail setEventInfo:[list objectAtIndex:row]];
     [self.navigationController pushViewController:detail animated:YES];
     [search resignFirstResponder];
 }
