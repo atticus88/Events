@@ -71,7 +71,7 @@
 								<object class="NSArray" key="IBScopeButtonTitles">
 									<bool key="EncodedWithXMLCoder">YES</bool>
 									<string>Name</string>
-									<string>Catagory</string>
+									<string>Category</string>
 									<string>Price</string>
 								</object>
 								<bool key="IBShowsScopeBar">YES</bool>
@@ -115,6 +115,7 @@
 						<string key="NSFrame">{{0, 366}, {320, 50}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
