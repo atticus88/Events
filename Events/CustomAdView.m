@@ -6,18 +6,21 @@
 //  Copyright 2011 Klint Holmes. All rights reserved.
 //
 
+#define adUrl @"http://davideugenepeterson.com/php-login/other/admin/testing/api/ads.php";
+
 #import "CustomAdWebView.h"
 #import "CustomAdView.h"
 #import "HTTPRequest.h"
 #import "JSON.h"
 
 @implementation CustomAdView
-@synthesize delegate;
+@synthesize delegate, adImage, adButton, results;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
+        results = [[NSDictionary alloc] init];
         // Initialization code
         //NSLog(@"Custom ad was initiated");
         self.userInteractionEnabled = YES;
@@ -28,8 +31,9 @@
         [self addSubview:adImage];
         [self addSubview:adButton];
         
-        adTime = [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(getAdFromServer) userInfo:nil repeats:YES];
+        adTime = [NSTimer scheduledTimerWithTimeInterval:300 target:self selector:@selector(getAdFromServer) userInfo:nil repeats:YES];
         [self getAdFromServer];
+        //adImage.image = [UIImage imageNamed:@"test.jpg"];
         
     }
     return self;
@@ -38,15 +42,26 @@
 
 - (void)loadAdPage:(NSString *)url {
    if([[self delegate] respondsToSelector:@selector(loadAdPage:)]) {
-       [[self delegate] loadAdPage:@"http://www.google.com"];
+       [[self delegate] loadAdPage:[results objectForKey:@"ad_url"]];// stringByReplacingOccurrencesOfString:@"\\" withString:@""]];
 	}
    // CustomAdWebView *webView = [[CustomAdWebView alloc] initWithNibName:@"CustomAdWebView" bundle:nil webSite:[NSURL URLWithString:@"http://www.google.com"]];
 }
 
 - (void)getAdFromServer {
+    adTime = [NSTimer scheduledTimerWithTimeInterval:300 target:self selector:@selector(getAdFromServer) userInfo:nil repeats:YES];
+    
+    adImage = [[UIImageView alloc] init];
+    adImage.frame = CGRectMake(0, 0, 320, 50);
+    adButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+    [adButton addTarget:self action:@selector(loadAdPage:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:adImage];
+    [self addSubview:adButton];
+    
+    //adImage.image = [UIImage imageNamed:@"test.jpg"];
+    
     HTTPRequest *request = [[HTTPRequest alloc] init];
     [request setDelegate:self];
-    [request startRequest:@"http://www.google.com" animated:NO];
+    [request startRequest:@"http://davideugenepeterson.com/php-login/other/admin/testing/api/ads.php" animated:NO];
     //[request release];
 }
 
@@ -56,10 +71,10 @@
         adImage.image = [UIImage imageWithData:response.buffer];
        
     } else {
-        NSString *jsonString = [[NSString alloc] initWithData:response.buffer encoding:NSUTF8StringEncoding];
-        //NSDictionary *results = [jsonString JSONValue];
-        NSLog(@"%@", jsonString);
-        [self loadAdImageWithURL:@"http://cdn.macrumors.com/article/2010/07/01/123339-nissan_iad_banner.jpg"];
+        NSString *jsonString = [[[NSString alloc] initWithData:response.buffer encoding:NSUTF8StringEncoding] autorelease];
+        self.results = [jsonString JSONValue];
+        NSLog(@"%@", results);
+        [self loadAdImageWithURL:[results objectForKey:@"ad_file"]];
     }
 }
 

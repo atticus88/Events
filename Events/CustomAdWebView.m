@@ -9,7 +9,7 @@
 #import "CustomAdWebView.h"
 
 @implementation CustomAdWebView
-@synthesize web;
+@synthesize web, url;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil webSite:(NSURL *)url {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -44,7 +44,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];//[NSURL URLWithString:@"http://www.google.com"]];
     [web loadRequest:request];
     // Do any additional setup after loading the view from its nib.
 }
@@ -60,6 +60,12 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+-(void)loadAdPage:(NSString *)url
+{
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com"]];
+    [web loadRequest:request];
 }
 
 @end

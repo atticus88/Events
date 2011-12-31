@@ -13,7 +13,7 @@
 
 
 @implementation EventDetailViewController
-@synthesize contents, map, shadow, touchDetector, /*eventDelegate*/eventInfo, name, description;
+@synthesize contents, map, shadow, touchDetector, /*eventDelegate*/eventInfo, name, description, urlButton, url, address;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,6 +42,14 @@
 
 - (void)viewDidLoad
 {
+    if(url != nil)
+    {
+        urlButton.alpha = 1;
+        [urlButton setTitle:[eventInfo objectForKey:@"link"] forState:UIControlStateNormal];
+    }
+    else
+        urlButton.alpha = 0;
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
@@ -51,12 +59,24 @@
     NSString *eventName = [eventInfo objectForKey:@"name"];//[[self eventDelegate].selectedEvent  objectForKey:@"name"];
     NSString *eventDescription = [eventInfo objectForKey:@"description"]; //[[self eventDelegate].selectedEvent  objectForKey:@"description"];
     
-    name.text = eventName;
+
+    self.title = eventName;
+    self.address.text = [NSString stringWithFormat:@"%@, %@", [eventInfo objectForKey:@"address"], [eventInfo objectForKey:@"zip"]];
+    
+    NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
+    NSDate *eventDate = [dateFormatter dateFromString:[eventInfo objectForKey:@"begin"]];
+    
+    [dateFormatter setDateFormat:@"h:mm a"];
+    NSString *time = [dateFormatter stringFromDate:eventDate];
+    [dateFormatter setDateFormat:@"EEEE MMM d, yyyy"];
+    name.text = [NSString stringWithFormat:@"%@ on %@", time, [dateFormatter stringFromDate:eventDate]];
     description.text = eventDescription;
     
     //Hacky way of top-aligning description label
     description.numberOfLines = 0;
-    description.frame = CGRectMake(46, 71, 231, 156);
+    description.frame = CGRectMake(20, 81, 280, 107);
     [description sizeToFit];
 }
 
@@ -109,12 +129,19 @@ numberOfRowsInSection:(NSInteger)section {
 }
 
 - (void)createEvent {
-	EKEventStore *eventStore = [[EKEventStore alloc] init];
+    NSString *address = [[NSString alloc] initWithFormat:@"%@, %@", [eventInfo objectForKey:@"address"], [eventInfo objectForKey:@"zip"]];
+    
+	EKEventStore *eventStore = [[[EKEventStore alloc] init] autorelease];
 	
 	EKEvent *event  = [EKEvent eventWithEventStore:eventStore];
-	event.startDate = [NSDate date]; 
-	event.endDate = [NSDate date];
-	event.title = @"Test";
+	
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    //2011-11-17 00:00:00
+    event.startDate = [dateFormatter dateFromString:[eventInfo objectForKey:@"begin"]]; 
+	event.endDate = [dateFormatter dateFromString:[eventInfo objectForKey:@"end"]];
+	event.title = [eventInfo objectForKey:@"name"];
+    event.location = [eventInfo objectForKey:@"address"];
 	//event.location = appDelegate.apCreator.testingCenter.NAME;
 	NSArray *alarmArray = [[NSArray alloc] initWithObjects:[EKAlarm alarmWithRelativeOffset:-1*60*60], nil];
 	event.alarms = alarmArray;
@@ -126,6 +153,7 @@ numberOfRowsInSection:(NSInteger)section {
 	//[appDelegate.appointmentAdd pushViewController:controller animated:YES];
 	[self presentModalViewController:controller animated:YES];
     
+    [dateFormatter release];
 }
 
 
@@ -226,8 +254,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // 1
     //Assigning coordinates
     CLLocationCoordinate2D zoomLocation;
+    
+    //NSLog(@"Lat:%@ Lng:%@ floatLat:%f floatLng:%f",[eventInfo objectForKey:@"lat"], [eventInfo objectForKey:@"lon"], [[eventInfo objectForKey:@"lat"]floatValue], [[eventInfo objectForKey:@"lon"] floatValue]);
+    
     zoomLocation.latitude = [[eventInfo objectForKey: @"lat"] floatValue];
-    zoomLocation.longitude = [[eventInfo objectForKey: @"lng"] floatValue];
+    zoomLocation.longitude = [[eventInfo objectForKey: @"lon"] floatValue];
 
     // 2
     //:Assigning viewing region
@@ -247,4 +278,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [annotation release];
 }
 
+- (IBAction)launchWebPage:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:url];
+}
 @end

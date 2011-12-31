@@ -7,7 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B0E36DA147AF04400986A08 /* EventsLocationSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0E36D8147AF04400986A08 /* EventsLocationSettingsViewController.m */; };
+		6B0E36DB147AF04400986A08 /* EventsLocationSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0E36D9147AF04400986A08 /* EventsLocationSettingsViewController.xib */; };
 		6B1494AA140C37C1004C1F21 /* CustomAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1494A9140C37C1004C1F21 /* CustomAdView.m */; };
+		6B248A2E149173FB00ADD67F /* BongoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B248A2D149173FB00ADD67F /* BongoIcon.png */; };
+		6B248A311491748700ADD67F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B248A301491748700ADD67F /* Default@2x.png */; };
+		6B35253C147AF9BA006F5CC0 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B35253B147AF9BA006F5CC0 /* settings.png */; };
+		6B63C92E143CB9F600D4D0F5 /* Recipes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B63C92C143CB9F600D4D0F5 /* Recipes.xcdatamodeld */; };
+		6B7E573E148FF9C7008BEAD8 /* Concerts.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7E5738148FF9C7008BEAD8 /* Concerts.png */; };
+		6B7E573F148FF9C7008BEAD8 /* Dancing.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7E5739148FF9C7008BEAD8 /* Dancing.png */; };
+		6B7E5740148FF9C7008BEAD8 /* Holiday.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7E573A148FF9C7008BEAD8 /* Holiday.png */; };
+		6B7E5741148FF9C7008BEAD8 /* Music.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7E573B148FF9C7008BEAD8 /* Music.png */; };
+		6B7E5742148FF9C7008BEAD8 /* Sports.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7E573C148FF9C7008BEAD8 /* Sports.png */; };
+		6B7E5743148FF9C7008BEAD8 /* Theater.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7E573D148FF9C7008BEAD8 /* Theater.png */; };
+		6B7E574D1490227C008BEAD8 /* CustomUIPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7E574B1490227C008BEAD8 /* CustomUIPickerView.m */; };
+		6B7E574E1490227C008BEAD8 /* CustomUIPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7E574C1490227C008BEAD8 /* CustomUIPickerView.xib */; };
+		6BA2C44B14753A180007BAFA /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BA2C44A14753A180007BAFA /* test.jpg */; };
+		6BA79DEA1492F30600F98EAF /* settings-cog.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA79DE91492F30600F98EAF /* settings-cog.png */; };
+		6BA79DED1492F9D300F98EAF /* brownButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA79DEC1492F9D300F98EAF /* brownButton.png */; };
+		6BA79DEF1492FB8100F98EAF /* background-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BA79DEE1492FB8100F98EAF /* background-bar.png */; };
+		6BCB3C3C1474B9AE0085A3DC /* IngredientTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCB3C3A1474B9AE0085A3DC /* IngredientTableViewCell.m */; };
+		6BCB3C3D1474B9AE0085A3DC /* IngredientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BCB3C3B1474B9AE0085A3DC /* IngredientTableViewCell.xib */; };
+		6BFC4DDB14914C7300090979 /* bongo-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFC4DD814914C7300090979 /* bongo-icon.png */; };
+		6BFC4DDC14914C7300090979 /* bongosplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6BFC4DD914914C7300090979 /* bongosplash.jpg */; };
+		6BFC4DE014914C9B00090979 /* bongo-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFC4DDF14914C9B00090979 /* bongo-icon.png */; };
+		6BFC4DE21491649A00090979 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFC4DE11491649A00090979 /* Default.png */; };
+		6BFC4DE41491676D00090979 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BFC4DE31491676D00090979 /* header.png */; };
 		FC18CAEB14070C8B001B0041 /* MyCLController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC18CAEA14070C8B001B0041 /* MyCLController.m */; };
 		FC18CAEE14070CA0001B0041 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC18CAED14070CA0001B0041 /* MapKit.framework */; };
 		FC18CAF014070CC3001B0041 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC18CAEF14070CC2001B0041 /* CoreLocation.framework */; };
@@ -38,8 +63,36 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B0E36D7147AF04400986A08 /* EventsLocationSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsLocationSettingsViewController.h; sourceTree = "<group>"; };
+		6B0E36D8147AF04400986A08 /* EventsLocationSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsLocationSettingsViewController.m; sourceTree = "<group>"; };
+		6B0E36D9147AF04400986A08 /* EventsLocationSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventsLocationSettingsViewController.xib; sourceTree = "<group>"; };
 		6B1494A8140C37C1004C1F21 /* CustomAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAdView.h; sourceTree = "<group>"; };
 		6B1494A9140C37C1004C1F21 /* CustomAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAdView.m; sourceTree = "<group>"; };
+		6B248A2D149173FB00ADD67F /* BongoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BongoIcon.png; sourceTree = "<group>"; };
+		6B248A301491748700ADD67F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6B35253B147AF9BA006F5CC0 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		6B63C92D143CB9F600D4D0F5 /* Recipes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipes.xcdatamodel; sourceTree = "<group>"; };
+		6B7E5738148FF9C7008BEAD8 /* Concerts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Concerts.png; sourceTree = "<group>"; };
+		6B7E5739148FF9C7008BEAD8 /* Dancing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dancing.png; sourceTree = "<group>"; };
+		6B7E573A148FF9C7008BEAD8 /* Holiday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Holiday.png; sourceTree = "<group>"; };
+		6B7E573B148FF9C7008BEAD8 /* Music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Music.png; sourceTree = "<group>"; };
+		6B7E573C148FF9C7008BEAD8 /* Sports.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sports.png; sourceTree = "<group>"; };
+		6B7E573D148FF9C7008BEAD8 /* Theater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Theater.png; sourceTree = "<group>"; };
+		6B7E574A1490227C008BEAD8 /* CustomUIPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUIPickerView.h; sourceTree = "<group>"; };
+		6B7E574B1490227C008BEAD8 /* CustomUIPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUIPickerView.m; sourceTree = "<group>"; };
+		6B7E574C1490227C008BEAD8 /* CustomUIPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomUIPickerView.xib; sourceTree = "<group>"; };
+		6BA2C44A14753A180007BAFA /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		6BA79DE91492F30600F98EAF /* settings-cog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-cog.png"; sourceTree = "<group>"; };
+		6BA79DEC1492F9D300F98EAF /* brownButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brownButton.png; sourceTree = "<group>"; };
+		6BA79DEE1492FB8100F98EAF /* background-bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-bar.png"; sourceTree = "<group>"; };
+		6BCB3C391474B9AE0085A3DC /* IngredientTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientTableViewCell.h; sourceTree = "<group>"; };
+		6BCB3C3A1474B9AE0085A3DC /* IngredientTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientTableViewCell.m; sourceTree = "<group>"; };
+		6BCB3C3B1474B9AE0085A3DC /* IngredientTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngredientTableViewCell.xib; sourceTree = "<group>"; };
+		6BFC4DD814914C7300090979 /* bongo-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bongo-icon.png"; sourceTree = "<group>"; };
+		6BFC4DD914914C7300090979 /* bongosplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bongosplash.jpg; sourceTree = "<group>"; };
+		6BFC4DDF14914C9B00090979 /* bongo-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bongo-icon.png"; sourceTree = "<group>"; };
+		6BFC4DE11491649A00090979 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6BFC4DE31491676D00090979 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		FC18CAE914070C8B001B0041 /* MyCLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCLController.h; sourceTree = "<group>"; };
 		FC18CAEA14070C8B001B0041 /* MyCLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCLController.m; sourceTree = "<group>"; };
 		FC18CAED14070CA0001B0041 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -116,6 +169,19 @@
 			name = CustomAdView;
 			sourceTree = "<group>";
 		};
+		6BCB3C371474B97F0085A3DC /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				6BCB3C391474B9AE0085A3DC /* IngredientTableViewCell.h */,
+				6BCB3C3A1474B9AE0085A3DC /* IngredientTableViewCell.m */,
+				6BCB3C3B1474B9AE0085A3DC /* IngredientTableViewCell.xib */,
+				6B7E574A1490227C008BEAD8 /* CustomUIPickerView.h */,
+				6B7E574B1490227C008BEAD8 /* CustomUIPickerView.m */,
+				6B7E574C1490227C008BEAD8 /* CustomUIPickerView.xib */,
+			);
+			name = CustomCell;
+			sourceTree = "<group>";
+		};
 		FC18CAF114070CCD001B0041 /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +223,11 @@
 		FC46A81A13CB72F20047A843 = {
 			isa = PBXGroup;
 			children = (
+				6B248A2D149173FB00ADD67F /* BongoIcon.png */,
+				6BFC4DDF14914C9B00090979 /* bongo-icon.png */,
+				6B63C92C143CB9F600D4D0F5 /* Recipes.xcdatamodeld */,
 				FC46A82F13CB72F20047A843 /* Events */,
+				6BA2C44A14753A180007BAFA /* test.jpg */,
 				FC46A82813CB72F20047A843 /* Frameworks */,
 				FC46A82613CB72F20047A843 /* Products */,
 			);
@@ -189,6 +259,7 @@
 		FC46A82F13CB72F20047A843 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				6BCB3C371474B97F0085A3DC /* CustomCell */,
 				6B1494A6140C378E004C1F21 /* CustomAdView */,
 				FC228501140C303600E2444B /* JSON */,
 				FC2284FB140C2CC700E2444B /* HTTP */,
@@ -202,6 +273,9 @@
 				FC46A84D13CB764C0047A843 /* EventDetailViewController.h */,
 				FC46A84E13CB764C0047A843 /* EventDetailViewController.m */,
 				FC46A84F13CB764C0047A843 /* EventDetailViewController.xib */,
+				6B0E36D7147AF04400986A08 /* EventsLocationSettingsViewController.h */,
+				6B0E36D8147AF04400986A08 /* EventsLocationSettingsViewController.m */,
+				6B0E36D9147AF04400986A08 /* EventsLocationSettingsViewController.xib */,
 				FC46A83013CB72F20047A843 /* Supporting Files */,
 			);
 			path = Events;
@@ -210,6 +284,21 @@
 		FC46A83013CB72F20047A843 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6BA79DEE1492FB8100F98EAF /* background-bar.png */,
+				6BA79DEC1492F9D300F98EAF /* brownButton.png */,
+				6BA79DE91492F30600F98EAF /* settings-cog.png */,
+				6B248A301491748700ADD67F /* Default@2x.png */,
+				6BFC4DE31491676D00090979 /* header.png */,
+				6BFC4DE11491649A00090979 /* Default.png */,
+				6BFC4DD814914C7300090979 /* bongo-icon.png */,
+				6BFC4DD914914C7300090979 /* bongosplash.jpg */,
+				6B7E5738148FF9C7008BEAD8 /* Concerts.png */,
+				6B7E5739148FF9C7008BEAD8 /* Dancing.png */,
+				6B7E573A148FF9C7008BEAD8 /* Holiday.png */,
+				6B7E573B148FF9C7008BEAD8 /* Music.png */,
+				6B7E573C148FF9C7008BEAD8 /* Sports.png */,
+				6B7E573D148FF9C7008BEAD8 /* Theater.png */,
+				6B35253B147AF9BA006F5CC0 /* settings.png */,
 				FC46A84913CB74950047A843 /* bottom_shadow.png */,
 				FC46A83113CB72F20047A843 /* Events-Info.plist */,
 				FC46A83213CB72F20047A843 /* InfoPlist.strings */,
@@ -275,6 +364,27 @@
 				FC46A84A13CB74950047A843 /* bottom_shadow.png in Resources */,
 				FC46A85113CB764C0047A843 /* EventDetailViewController.xib in Resources */,
 				FC9C6A07140EE2DD00708FDF /* CustomAdWebView.xib in Resources */,
+				6BCB3C3D1474B9AE0085A3DC /* IngredientTableViewCell.xib in Resources */,
+				6BA2C44B14753A180007BAFA /* test.jpg in Resources */,
+				6B0E36DB147AF04400986A08 /* EventsLocationSettingsViewController.xib in Resources */,
+				6B35253C147AF9BA006F5CC0 /* settings.png in Resources */,
+				6B7E573E148FF9C7008BEAD8 /* Concerts.png in Resources */,
+				6B7E573F148FF9C7008BEAD8 /* Dancing.png in Resources */,
+				6B7E5740148FF9C7008BEAD8 /* Holiday.png in Resources */,
+				6B7E5741148FF9C7008BEAD8 /* Music.png in Resources */,
+				6B7E5742148FF9C7008BEAD8 /* Sports.png in Resources */,
+				6B7E5743148FF9C7008BEAD8 /* Theater.png in Resources */,
+				6B7E574E1490227C008BEAD8 /* CustomUIPickerView.xib in Resources */,
+				6BFC4DDB14914C7300090979 /* bongo-icon.png in Resources */,
+				6BFC4DDC14914C7300090979 /* bongosplash.jpg in Resources */,
+				6BFC4DE014914C9B00090979 /* bongo-icon.png in Resources */,
+				6BFC4DE21491649A00090979 /* Default.png in Resources */,
+				6BFC4DE41491676D00090979 /* header.png in Resources */,
+				6B248A2E149173FB00ADD67F /* BongoIcon.png in Resources */,
+				6B248A311491748700ADD67F /* Default@2x.png in Resources */,
+				6BA79DEA1492F30600F98EAF /* settings-cog.png in Resources */,
+				6BA79DED1492F9D300F98EAF /* brownButton.png in Resources */,
+				6BA79DEF1492FB8100F98EAF /* background-bar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +409,10 @@
 				FC228514140C303600E2444B /* SBJsonWriter.m in Sources */,
 				6B1494AA140C37C1004C1F21 /* CustomAdView.m in Sources */,
 				FC9C6A06140EE2DD00708FDF /* CustomAdWebView.m in Sources */,
+				6B63C92E143CB9F600D4D0F5 /* Recipes.xcdatamodeld in Sources */,
+				6BCB3C3C1474B9AE0085A3DC /* IngredientTableViewCell.m in Sources */,
+				6B0E36DA147AF04400986A08 /* EventsLocationSettingsViewController.m in Sources */,
+				6B7E574D1490227C008BEAD8 /* CustomUIPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,13 +515,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer: George Shank (U93LRQWK79)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Events/Events-Prefix.pch";
 				INFOPLIST_FILE = "Events/Events-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "28F93010-C769-4396-9591-2F66F6E6E18A";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -453,6 +569,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6B63C92C143CB9F600D4D0F5 /* Recipes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6B63C92D143CB9F600D4D0F5 /* Recipes.xcdatamodel */,
+			);
+			currentVersion = 6B63C92D143CB9F600D4D0F5 /* Recipes.xcdatamodel */;
+			path = Recipes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FC46A81C13CB72F20047A843 /* Project object */;
 }

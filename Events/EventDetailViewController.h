@@ -19,8 +19,12 @@
     NSString *temp;
     UILabel *name;
     UILabel *description;
+    UILabel *address;
     //MKAnnotation
     NSDictionary *eventInfo;
+    
+    UIButton *urlButton;
+    NSURL *url;
     
     //EventsAppDelegate *eventDelegate;
 }
@@ -31,10 +35,13 @@
 @property (nonatomic, retain) IBOutlet MKMapView *map;
 @property (nonatomic, retain) IBOutlet UILabel *name;
 @property (nonatomic, retain) IBOutlet UILabel *description;
+@property (nonatomic, retain) IBOutlet UILabel *address;
 
 @property (nonatomic, retain) NSDictionary *eventInfo;
+@property (nonatomic, retain) IBOutlet UIButton *urlButton;
+@property (nonatomic, retain) NSURL *url;
 //@property (nonatomic, retain) EventsAppDelegate *eventDelegate;
 
 - (IBAction)calButtonPressed:(id)sender;
-
+- (IBAction)launchWebPage:(id)sender;
 @end

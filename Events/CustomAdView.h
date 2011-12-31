@@ -19,9 +19,15 @@
     UIImageView *adImage;
     UIButton *adButton;
     NSTimer *adTime;
+    
+    NSDictionary *results;
 }
 
+@property (nonatomic, retain) UIImageView *adImage;
+@property (nonatomic, retain) UIButton *adButton;
 @property (retain) id delegate;
+
+@property (nonatomic, retain) NSDictionary *results;
 
 - (void)getAdFromServer;
 - (void)loadAdImageWithURL:(NSString *)url;
